@@ -12,7 +12,7 @@ services:
     shm_size: '1gb'
     restart: unless-stopped
     networks:
-      - proxy_network
+      - infra_proxy-network
 
 networks:
   proxy_network:
