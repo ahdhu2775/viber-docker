@@ -3,7 +3,7 @@ FROM lscr.io/linuxserver/baseimage-kasmvnc:ubuntujammy
 # Install dependencies + Viber
 RUN apt-get update && \
     apt-get install -y wget libnotify4 libnss3 libxss1 libasound2 && \
-    wget -O /tmp/viber.deb "https://download.cdn.viber.com/desktop/Linux/viber.deb" && \
+    wget -O /tmp/viber.deb "https://download.cdn.viber.com/cdn/desktop/Linux/viber.deb" && \
     apt-get install -y /tmp/viber.deb && \
     rm /tmp/viber.deb && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
