@@ -15,7 +15,7 @@ services:
       - infra_proxy-network
 
 networks:
-  proxy_network:
+  infra_proxy-network:
     external: true
 
 volumes:
