@@ -13,7 +13,7 @@ RUN apt-get update && \
 
 # Autostart Viber in the desktop session
 RUN mkdir -p /defaults && \
-    printf '#!/bin/bash\nviber &\n' > /defaults/autostart && \
+    printf '#!/bin/bash\n/opt/viber/Viber &\n' > /defaults/autostart && \
     chmod +x /defaults/autostart
 
 ENV TITLE=Viber
