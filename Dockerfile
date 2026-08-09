@@ -2,7 +2,7 @@ FROM lscr.io/linuxserver/baseimage-kasmvnc:ubuntujammy
 
 # Install dependencies + Viber
 RUN apt-get update && \
-    apt-get install -y wget libnotify4 libnss3 libxss1 libgconf-2-4 libasound2 && \
+    apt-get install -y wget libnotify4 libnss3 libxss1 libasound2 && \
     wget -O /tmp/viber.deb "https://download.cdn.viber.com/desktop/Linux/viber.deb" && \
     apt-get install -y /tmp/viber.deb && \
     rm /tmp/viber.deb && \
@@ -12,6 +12,7 @@ RUN apt-get update && \
 RUN mkdir -p /defaults && \
     printf '#!/bin/bash\nviber &\n' > /defaults/autostart && \
     chmod +x /defaults/autostart
+
 ENV TITLE=Viber
 
 EXPOSE 3000
