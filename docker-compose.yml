@@ -1,0 +1,22 @@
+services:
+  viber:
+    build: .
+    container_name: viber
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Indian/Maldives
+      - TITLE=Viber
+    volumes:
+      - viber_config:/config
+    shm_size: '1gb'
+    restart: unless-stopped
+    networks:
+      - proxy_network
+
+networks:
+  proxy_network:
+    external: true
+
+volumes:
+  viber_config:
