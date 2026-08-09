@@ -5,7 +5,7 @@ RUN rm -f /etc/apt/sources.list.d/nodesource.list
 
 # Install dependencies + Viber
 RUN apt-get update && \
-    apt-get install -y wget libnotify4 libnss3 libxss1 libasound2 libappindicator3-1 libxtst6 libgstreamer1.0-0 libgstreamer-plugins-base1.0-0 && \
+    apt-get install -y wget libnotify4 libnss3 libxss1 libasound2 libappindicator3-1 libxtst6 libgstreamer1.0-0 libgstreamer-plugins-base1.0-0 libatomic1 && \
     wget -O /tmp/viber.deb "https://download.cdn.viber.com/cdn/desktop/Linux/viber.deb" && \
     apt install -y /tmp/viber.deb && \
     rm /tmp/viber.deb && \
